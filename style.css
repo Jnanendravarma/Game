@@ -138,7 +138,7 @@ body {
 
 .cell {
     aspect-ratio: 1/1;
-    background: rgba(255, 255, 255, 0.03); /* More transparent cells */
+    background: rgba(114, 176, 192, 0.03); /* More transparent cells */
     border-radius: 10px;
     display: flex;
     justify-content: center;
