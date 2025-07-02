@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="cosmic-container">
+        <div class="header">
+            <h1 class="title">Cosmic Tic-Tac-Toe</h1>
+            <p class="subtitle">A stellar battle of X's and O's</p>
+        </div>
+        <div class="player-selection">
+            <button class="player-btn active" id="playerX">
+                <i class="fas fa-user-astronaut"></i> Play as X
+            </button>
+            <button class="player-btn" id="playerO">
+                <i class="fas fa-rocket"></i> Play as O
+            </button>
+        </div>
+        <div class="game-set-selection">
+            <button class="set-btn active" data-games="1">1 Game</button>
+            <button class="set-btn" data-games="3">3 Games</button>
+            <button class="set-btn" data-games="5">5 Games</button>
+        </div>
+        <div class="game-status" id="gameStatus">
+            Click 'Multiplayer' to connect!
+        </div>
+        <div class="scoreboard">
+            <div class="score score-x active" id="scoreX">
+                <div>Player X</div>
+                <div class="score-value">0</div>
+            </div>
+            <div class="score score-o" id="scoreO">
+                <div>Player O</div>
+                <div class="score-value">0</div>
+            </div>
+        </div>
+        <div class="game-board" id="gameBoard"></div>
+        <div class="controls">
+            <button class="control-btn reset-btn" id="resetBtn">
+                <i class="fas fa-sync-alt"></i> Reset
+            </button>
+            <button class="control-btn ai-btn" id="aiBtn">
+                <i class="fas fa-robot"></i> Play vs AI
+            </button>
+            <button class="control-btn multiplayer-btn" id="multiplayerBtn">
+                <i class="fas fa-users"></i> Multiplayer
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
