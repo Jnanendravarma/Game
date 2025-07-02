@@ -1,13 +1,13 @@
 :root {
-    --primary: #6e45e2;
-    --secondary: #88d3ce;
-    --accent: #ff7e5f;
-    --dark: #5eaac5;
-    --light: #f8f9fa;
-    --x-color: #ff4d4d;
-    --o-color: #4da6ff;
-    --shadow: 0 10px 30px rgba(213, 231, 133, 0.3);
-    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --primary: #8b5cf6; /* Vibrant purple for main elements */
+    --secondary: #22d3ee; /* Bright cyan for secondary elements */
+    --accent: #f472b6; /* Soft pink for highlights */
+    --dark: #3b82f6; /* Deep blue for contrast */
+    --light: #f1f5f9; /* Light gray for text and backgrounds */
+    --x-color: #ef4444; /* Bold red for X */
+    --o-color: #3b82f6; /* Bright blue for O */
+    --shadow: 0 8px 24px rgba(139, 92, 246, 0.2); /* Softer purple shadow */
+    --transition: all 0.3s cubic-bezier(0.2, 0.8, 0.3, 1); /* Smoother transition */
 }
 
 * {
@@ -19,9 +19,9 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #5e72c3, #b21f1f, #fdbb2d);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: linear-gradient(135deg, #4c1d95, #db2777, #22d3ee); /* Updated gradient with vibrant colors */
+    background-size: 300% 300%; /* Reduced size for faster animation */
+    animation: gradientBG 12s ease infinite;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@ body {
 
 .particle {
     position: absolute;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.5); /* Slightly more transparent particles */
     border-radius: 50%;
     pointer-events: none;
 }
@@ -58,12 +58,12 @@ body {
 .cosmic-container {
     width: 90vw;
     max-width: 600px;
-    background: rgba(135, 78, 129, 0.7);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
+    background: rgba(30, 41, 59, 0.6); /* Darker, more transparent background */
+    backdrop-filter: blur(12px); /* Slightly reduced blur for clarity */
+    border-radius: 20px;
     padding: clamp(1rem, 5vw, 2rem);
     box-shadow: var(--shadow);
-    border: 1px solid rgba(197, 139, 68, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Lighter border */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -78,10 +78,10 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-    opacity: 0.15;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 60%); /* Tighter gradient */
+    opacity: 0.2; /* More transparent effect */
     z-index: -1;
-    animation: rotate 60s linear infinite;
+    animation: rotate 50s linear infinite;
 }
 
 @keyframes rotate {
@@ -100,16 +100,16 @@ body {
 .title {
     font-size: clamp(1.8rem, 6vw, 2.5rem);
     font-weight: 700;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    background: linear-gradient(90deg, var(--primary), var(--secondary)); /* Updated gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 1px;
-    text-shadow: 0 2px 10px rgba(81, 159, 154, 0.2);
+    text-shadow: 0 2px 8px rgba(34, 211, 238, 0.3); /* Softer shadow */
 }
 
 .subtitle {
     font-size: clamp(0.8rem, 3vw, 1rem);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85); /* Slightly brighter subtitle */
     margin-bottom: 0.5rem;
 }
 
@@ -118,13 +118,13 @@ body {
     margin: 1rem 0;
     min-height: 2rem;
     color: var(--secondary);
-    text-shadow: 0 0 10px rgba(136, 211, 206, 0.5);
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.4); /* Softer glow */
     transition: var(--transition);
 }
 
 .game-status.winner {
     color: var(--accent);
-    text-shadow: 0 0 15px rgba(255, 126, 95, 0.7);
+    text-shadow: 0 0 12px rgba(244, 114, 182, 0.6); /* Updated pink glow */
     transform: scale(1.05);
 }
 
@@ -138,7 +138,7 @@ body {
 
 .cell {
     aspect-ratio: 1/1;
-    background: rgba(187, 202, 105, 0.05);
+    background: rgba(255, 255, 255, 0.03); /* More transparent cells */
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -147,14 +147,14 @@ body {
     position: relative;
     overflow: hidden;
     transition: var(--transition);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12); /* Slightly brighter border */
     font-size: clamp(2rem, 8vw, 3rem);
 }
 
 .cell:hover {
-    background: rgba(167, 101, 189, 0.1);
+    background: rgba(139, 92, 246, 0.08); /* Subtle purple hover */
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cell.x, .cell.o {
@@ -209,13 +209,13 @@ body {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 50px;
-    font-size: clamp(0.9rem, 3vw, 1rem);
+    font-size: clamp(0.9rem, 3 jajvw, 1rem);
     font-weight: bold;
     cursor: pointer;
     transition: var(--transition);
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08); /* More transparent buttons */
     color: white;
     display: flex;
     align-items: center;
@@ -226,12 +226,12 @@ body {
 
 .player-btn:hover, .set-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
 .player-btn.active, .set-btn.active {
     background: linear-gradient(45deg, var(--primary), var(--secondary));
-    box-shadow: 0 5px 20px rgba(110, 69, 226, 0.4);
+    box-shadow: 0 5px 18px rgba(139, 92, 246, 0.3); /* Softer shadow */
 }
 
 .player-btn i, .set-btn i {
@@ -273,7 +273,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.2) 50%, transparent 75%);
+    background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.15) 50%, transparent 75%);
     background-size: 400% 400%;
     transition: all 0.6s ease;
     opacity: 0;
@@ -290,23 +290,23 @@ body {
 }
 
 .reset-btn {
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    background: linear-gradient(45deg, var(--accent), #f9a8d4); /* Pink gradient */
     color: white;
 }
 
 .reset-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 126, 95, 0.4);
+    box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
 }
 
 .ai-btn, .multiplayer-btn {
-    background: linear-gradient(45deg, #6e45e2, #8a2be2);
+    background: linear-gradient(45deg, var(--primary), var(--dark)); /* Purple to blue gradient */
     color: white;
 }
 
 .ai-btn:hover, .multiplayer-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(110, 69, 226, 0.4);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
 }
 
 .scoreboard {
@@ -314,10 +314,10 @@ body {
     justify-content: space-around;
     margin: 1.5rem auto;
     max-width: min(400px, 90vw);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03); /* More transparent */
     border-radius: 10px;
     padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .score {
@@ -328,7 +328,7 @@ body {
 }
 
 .score.active {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     transform: scale(1.05);
 }
 
@@ -353,9 +353,9 @@ body {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 126, 95, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(255, 126, 95, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 126, 95, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(244, 114, 182, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0); }
 }
 
 .cell.x::before, .cell.x::after,
@@ -438,11 +438,11 @@ body {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: #f00;
+    background: var(--accent); /* Use accent color for confetti */
     opacity: 0;
 }
 
 @keyframes confetti-fall {
-    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 0.9; }
     100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
