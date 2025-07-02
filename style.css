@@ -58,7 +58,7 @@ body {
 .cosmic-container {
     width: 90vw;
     max-width: 600px;
-    background: rgba(201, 182, 113, 0.6); /* Darker, more transparent background */
+    background: rgba(75, 184, 143, 0.6); /* Darker, more transparent background */
     backdrop-filter: blur(12px); /* Slightly reduced blur for clarity */
     border-radius: 20px;
     padding: clamp(1rem, 5vw, 2rem);
